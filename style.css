@@ -1,0 +1,153 @@
+/* base styles */
+
+body,
+.accordion,
+.accordion-item,
+.accordion-header,
+.accordion-content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 0;
+  background-color:#f7f7f7;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 0x;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#accordion-controls {
+ 
+  transform: translateX(17%);
+}
+
+.accordion-header {
+  background-color: #f7f7f7;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header::after {
+  content: '+';
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #666;
+  transition: transform 0.3s ease-out;
+}
+
+.accordion-header.active::after {
+  content: '-';
+  top: 10px;
+  transform: rotate(180deg);
+  color: #333;
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out 0.1s, opacity 0.3s ease-out;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.accordion-content.show {
+  max-height: 100vh;
+  opacity: 1;
+  transition: max-height 0.3s ease-in 0.1s, opacity 0.3s ease-in;
+}
+
+
+.accordion-content p {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.accordion-content td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-content table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/* themes */
+.dark .accordion {
+  background-color: #333;
+  color: #ddd;
+}
+
+.dark .accordion-header {
+  background-color: #333;
+  color: #ddd;
+}
+
+.dark .accordion-header::after {
+  color: #ddd;
+}
+
+.dark .accordion-content {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark .accordion-content img {
+    filter: none;
+}
+
+.dark .accordion-content p,
+.dark .accordion-content td {
+  color: #ddd;
+}
+
+.dark .accordion-content table {
+  border-color: #444;
+}
+
+/* switcher */
+#theme-switcher {
+  background-color: #333;
+  color: #ddd;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+#theme-switcher:hover {
+  background-color: #555;
+}
+
+#theme-switcher.dark {
+  background-color: #ddd;
+  color: #333;
+}

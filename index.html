@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Widget</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="themes/dark.css">
+</head>
+<body>
+
+
+  <div class="accordion">
+    <div id="accordion-controls">
+      <button id="theme-switcher">Switch to dark theme</button>
+      <button id="open-all">Open all sections</button>
+      <button id="close-all">Close all sections</button>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">Секция 1</h2>
+      <div class="accordion-content">
+        <ul>
+          <li>Пункт 1</li>
+          <li>Пункт 2</li>
+          <li>Пункт 3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">Секция 2</h2>
+      <div class="accordion-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Заголовок 1</th>
+              <th>Заголовок 2</th>
+              <th>Заголовок 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Строка 1, Столбец 1</td>
+              <td>Строка 1, Столбец 2</td>
+              <td>Строка 1, Столбец 3</td>
+            </tr>
+            <tr>
+              <td>Строка 2, Столбец 1</td>
+              <td>Строка 2, Столбец 2</td>
+              <td>Строка 2, Столбец 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">Секция 3</h2>
+      <div class="accordion-content">
+        <img src="example.jpg" alt="Example image">
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">Секция 4</h2>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <h2 class="accordion-header">Секция 4.5</h2>
+                <div class="accordion-content">
+                    <th>Заголовок 1</th>
+                </div>
+              </div>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
